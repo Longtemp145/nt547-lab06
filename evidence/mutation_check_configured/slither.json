@@ -1,0 +1,241 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "updateOwner",
+            "source_mapping": {
+              "start": 1599,
+              "length": 224,
+              "filename_relative": "AuditTarget.sol",
+              "filename_absolute": "/mnt/d/Study/Blockchain/TH/Lab6/Lab06_SinhVien/AuditTarget.sol",
+              "filename_short": "AuditTarget.sol",
+              "is_dependency": false,
+              "lines": [
+                56,
+                57,
+                58,
+                59,
+                60,
+                61
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "StakingPool_1005",
+                "source_mapping": {
+                  "start": 239,
+                  "length": 1866,
+                  "filename_relative": "AuditTarget.sol",
+                  "filename_absolute": "/mnt/d/Study/Blockchain/TH/Lab6/Lab06_SinhVien/AuditTarget.sol",
+                  "filename_short": "AuditTarget.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "updateOwner(address)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(tx.origin == owner,not owner)",
+            "source_mapping": {
+              "start": 1657,
+              "length": 40,
+              "filename_relative": "AuditTarget.sol",
+              "filename_absolute": "/mnt/d/Study/Blockchain/TH/Lab6/Lab06_SinhVien/AuditTarget.sol",
+              "filename_short": "AuditTarget.sol",
+              "is_dependency": false,
+              "lines": [
+                57
+              ],
+              "starting_column": 9,
+              "ending_column": 49
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "updateOwner",
+                "source_mapping": {
+                  "start": 1599,
+                  "length": 224,
+                  "filename_relative": "AuditTarget.sol",
+                  "filename_absolute": "/mnt/d/Study/Blockchain/TH/Lab6/Lab06_SinhVien/AuditTarget.sol",
+                  "filename_short": "AuditTarget.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "StakingPool_1005",
+                    "source_mapping": {
+                      "start": 239,
+                      "length": 1866,
+                      "filename_relative": "AuditTarget.sol",
+                      "filename_absolute": "/mnt/d/Study/Blockchain/TH/Lab6/Lab06_SinhVien/AuditTarget.sol",
+                      "filename_short": "AuditTarget.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36,
+                        37,
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51,
+                        52,
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66,
+                        67,
+                        68,
+                        69
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "updateOwner(address)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "StakingPool_1005.updateOwner(address) (AuditTarget.sol#56-61) uses tx.origin for authorization: require(bool,string)(tx.origin == owner,not owner) (AuditTarget.sol#57)\n",
+        "markdown": "[StakingPool_1005.updateOwner(address)](AuditTarget.sol#L56-L61) uses tx.origin for authorization: [require(bool,string)(tx.origin == owner,not owner)](AuditTarget.sol#L57)\n",
+        "first_markdown_element": "AuditTarget.sol#L56-L61",
+        "id": "55e53ed955579dd808ace34bb947c3f527178ec10f56ca4da6a5aaedf4c999f8",
+        "check": "tx-origin",
+        "impact": "Medium",
+        "confidence": "Medium",
+        "reference": "https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-usage-of-txorigin"
+      }
+    ]
+  }
+}
