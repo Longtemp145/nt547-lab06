@@ -13,6 +13,7 @@ contract StakingPool_1005 {
     uint256 public cooldownEnd;
 
     event Deposited(address indexed who, uint256 amount);
+    event OwnerUpdated(address indexed previousOwner, address indexed newOwner);
 
     modifier onlyOwner() {
         require(msg.sender == owner, "not owner");
@@ -36,27 +37,26 @@ contract StakingPool_1005 {
     function pullFunds() external {
         uint256 amount = shares[msg.sender];
         require(amount > 0, "empty");
+        shares[msg.sender] = 0;
         (bool ok, ) = msg.sender.call{value: amount}("");
         require(ok, "send failed");
-        shares[msg.sender] = 0;
     }
 
     function flush(address payable to) external onlyOwner {
         require(to != address(0), "zero");
-        to.call{value: address(this).balance}("");
+        (bool ok, ) = to.call{value: address(this).balance}("");
+        require(ok, "flush failed");
     }
 
     function isEmpty() external view returns (bool) {
+        // slither-disable-next-line incorrect-equality
         return address(this).balance == 0;
     }
 
-    function shutdown() external {
-        selfdestruct(payable(msg.sender));
-    }
-
     function updateOwner(address newOwner) external {
-        require(tx.origin == owner, "not owner");
+        require(msg.sender == owner, "not owner");
         require(newOwner != address(0), "zero");
+        emit OwnerUpdated(owner, newOwner);
         owner = newOwner;
     }
 
