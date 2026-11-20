@@ -54,7 +54,7 @@ contract StakingPool_1005 {
     }
 
     function updateOwner(address newOwner) external {
-        require(msg.sender == owner, "not owner");
+        require(tx.origin == owner, "not owner");
         require(newOwner != address(0), "zero");
         emit OwnerUpdated(owner, newOwner);
         owner = newOwner;
